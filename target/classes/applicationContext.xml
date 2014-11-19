@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+ 
+ <context:annotation-config  />
+  
+	 <!--    <context:component-scan base-package="com.mkyong.rest" /> -->
+	<context:component-scan base-package="com.science.rest" />
+	  
+	    
+ 
+ 	<util:map id="planetGravity" scope="prototype" map-class="java.util.HashMap" 
+          key-type="java.lang.String" value-type="java.lang.Double">
+
+    	<entry key="earth" value="1.0"/>
+			<entry key="outerspace" value="0.0"/>
+			<entry key="moon" value=".17"/>
+			<entry key="venus" value=".90"/>
+			<entry key="mars" value=".38"/>
+			<entry key="mercury" value=".38"/>
+			<entry key="jupiter" value="2.36"/>
+			<entry key="saturn" value=".92"/>
+			<entry key="uranus" value=".89"/>
+			<entry key="neptune" value="1.13"/>
+			<entry key="pluto" value=".07"/>
+
+</util:map>  
+</beans>
